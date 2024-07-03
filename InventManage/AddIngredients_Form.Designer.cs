@@ -50,30 +50,39 @@
             this.backbtn = new System.Windows.Forms.Button();
             this.addbtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Ingredient_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ingredient_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mROPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unitcostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.updatebtn = new System.Windows.Forms.Button();
+            this.delbtn = new System.Windows.Forms.Button();
+            this.invTablesDatabaseDataSet = new InventManage.InvTablesDatabaseDataSet();
+            this.tblIngredientsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblIngredientsTableAdapter = new InventManage.InvTablesDatabaseDataSetTableAdapters.tblIngredientsTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
+            this.ingredientIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ingredientNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblIngredientsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.tblIngredientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblIngredientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.invTablesDatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.delbtn);
+            this.panel1.Controls.Add(this.updatebtn);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.SuppliercomboBox3);
             this.panel1.Controls.Add(this.CategorycomboBox2);
@@ -143,9 +152,7 @@
             this.UnitcomboBox1.FormattingEnabled = true;
             this.UnitcomboBox1.Items.AddRange(new object[] {
             "Kilogram",
-            "Gram",
-            "Liter",
-            "Milliliter"});
+            "Liter"});
             this.UnitcomboBox1.Location = new System.Drawing.Point(304, 215);
             this.UnitcomboBox1.Name = "UnitcomboBox1";
             this.UnitcomboBox1.Size = new System.Drawing.Size(131, 33);
@@ -301,119 +308,146 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Ingredient_Id,
-            this.Ingredient_Name,
-            this.mROPDataGridViewTextBoxColumn,
-            this.Quantity,
-            this.unitDataGridViewTextBoxColumn,
-            this.unitcostDataGridViewTextBoxColumn,
-            this.categoryDataGridViewTextBoxColumn,
-            this.supplierDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tblIngredientsBindingSource2;
+            this.ingredientIdDataGridViewTextBoxColumn,
+            this.ingredientNameDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn1,
+            this.quantityDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.dataGridView1.DataSource = this.tblIngredientsBindingSource3;
             this.dataGridView1.Location = new System.Drawing.Point(3, 93);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(888, 340);
             this.dataGridView1.TabIndex = 2;
             // 
-            // Ingredient_Id
-            // 
-            this.Ingredient_Id.DataPropertyName = "Ingredient_Id";
-            this.Ingredient_Id.HeaderText = "Ingredient_Id";
-            this.Ingredient_Id.Name = "Ingredient_Id";
-            this.Ingredient_Id.ReadOnly = true;
-            // 
-            // Ingredient_Name
-            // 
-            this.Ingredient_Name.DataPropertyName = "Ingredient_Name";
-            this.Ingredient_Name.HeaderText = "Ingredient_Name";
-            this.Ingredient_Name.Name = "Ingredient_Name";
-            this.Ingredient_Name.Width = 150;
-            // 
-            // mROPDataGridViewTextBoxColumn
-            // 
-            this.mROPDataGridViewTextBoxColumn.DataPropertyName = "MROP";
-            this.mROPDataGridViewTextBoxColumn.HeaderText = "MROP";
-            this.mROPDataGridViewTextBoxColumn.Name = "mROPDataGridViewTextBoxColumn";
-            // 
-            // Quantity
-            // 
-            this.Quantity.DataPropertyName = "Quantity";
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            // 
-            // unitDataGridViewTextBoxColumn
-            // 
-            this.unitDataGridViewTextBoxColumn.DataPropertyName = "Unit";
-            this.unitDataGridViewTextBoxColumn.HeaderText = "Unit";
-            this.unitDataGridViewTextBoxColumn.Name = "unitDataGridViewTextBoxColumn";
-            // 
-            // unitcostDataGridViewTextBoxColumn
-            // 
-            this.unitcostDataGridViewTextBoxColumn.DataPropertyName = "Unit_cost";
-            this.unitcostDataGridViewTextBoxColumn.HeaderText = "Unit_cost";
-            this.unitcostDataGridViewTextBoxColumn.Name = "unitcostDataGridViewTextBoxColumn";
-            // 
-            // categoryDataGridViewTextBoxColumn
-            // 
-            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
-            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
-            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
-            // 
-            // supplierDataGridViewTextBoxColumn
-            // 
-            this.supplierDataGridViewTextBoxColumn.DataPropertyName = "Supplier";
-            this.supplierDataGridViewTextBoxColumn.HeaderText = "Supplier";
-            this.supplierDataGridViewTextBoxColumn.Name = "supplierDataGridViewTextBoxColumn";
-            // 
-            // tblIngredientsBindingSource2
-            // 
-            this.tblIngredientsBindingSource2.DataMember = "tblIngredients";
-            // 
-            // dishesDataSet
-            // 
-            // 
-            // tblIngredientsBindingSource1
-            // 
-            this.tblIngredientsBindingSource1.DataMember = "tblIngredients";
-            // 
-            // ingredientDataSet
-            // 
-            // 
-            // ingredientsDataSet
-            // 
-            // 
-            // tblIngredientsBindingSource
-            // 
-            this.tblIngredientsBindingSource.DataMember = "tblIngredients";
-            // 
-            // tblIngredientsTableAdapter
-            // 
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Controls.Add(this.dataGridView1);
-            this.flowLayoutPanel1.Controls.Add(this.dataGridView2);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 1);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(901, 717);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
-            // dataGridView2
+            // updatebtn
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 439);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView2.TabIndex = 3;
+            this.updatebtn.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updatebtn.Location = new System.Drawing.Point(414, 134);
+            this.updatebtn.Name = "updatebtn";
+            this.updatebtn.Size = new System.Drawing.Size(116, 29);
+            this.updatebtn.TabIndex = 22;
+            this.updatebtn.Text = "Update";
+            this.updatebtn.UseVisualStyleBackColor = true;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
             // 
-            // tblIngredientsTableAdapter1
+            // delbtn
             // 
+            this.delbtn.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delbtn.Location = new System.Drawing.Point(536, 134);
+            this.delbtn.Name = "delbtn";
+            this.delbtn.Size = new System.Drawing.Size(116, 29);
+            this.delbtn.TabIndex = 23;
+            this.delbtn.Text = "Delete";
+            this.delbtn.UseVisualStyleBackColor = true;
+            this.delbtn.Click += new System.EventHandler(this.delbtn_Click);
             // 
-            // tblIngredientsTableAdapter2
+            // invTablesDatabaseDataSet
             // 
+            this.invTablesDatabaseDataSet.DataSetName = "InvTablesDatabaseDataSet";
+            this.invTablesDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblIngredientsBindingSource3
+            // 
+            this.tblIngredientsBindingSource3.DataMember = "tblIngredients";
+            this.tblIngredientsBindingSource3.DataSource = this.invTablesDatabaseDataSet;
+            // 
+            // tblIngredientsTableAdapter
+            // 
+            this.tblIngredientsTableAdapter.ClearBeforeFill = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(658, 134);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(166, 29);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "Reload Table";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // ingredientIdDataGridViewTextBoxColumn
+            // 
+            this.ingredientIdDataGridViewTextBoxColumn.DataPropertyName = "Ingredient_Id";
+            this.ingredientIdDataGridViewTextBoxColumn.FillWeight = 65F;
+            this.ingredientIdDataGridViewTextBoxColumn.HeaderText = "Ingredient_Id";
+            this.ingredientIdDataGridViewTextBoxColumn.Name = "ingredientIdDataGridViewTextBoxColumn";
+            this.ingredientIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ingredientNameDataGridViewTextBoxColumn
+            // 
+            this.ingredientNameDataGridViewTextBoxColumn.DataPropertyName = "Ingredient_Name";
+            this.ingredientNameDataGridViewTextBoxColumn.FillWeight = 200F;
+            this.ingredientNameDataGridViewTextBoxColumn.HeaderText = "Ingredient_Name";
+            this.ingredientNameDataGridViewTextBoxColumn.Name = "ingredientNameDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MROP";
+            this.dataGridViewTextBoxColumn1.FillWeight = 50F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "MROP";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.FillWeight = 75F;
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Unit";
+            this.dataGridViewTextBoxColumn2.FillWeight = 75F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Unit";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Unit_cost";
+            this.dataGridViewTextBoxColumn3.FillWeight = 75F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Unit_cost";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Category";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Category";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Supplier";
+            this.dataGridViewTextBoxColumn5.FillWeight = 75F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Supplier";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // tblIngredientsBindingSource2
+            // 
+            this.tblIngredientsBindingSource2.DataMember = "tblIngredients";
+            // 
+            // tblIngredientsBindingSource1
+            // 
+            this.tblIngredientsBindingSource1.DataMember = "tblIngredients";
+            // 
+            // tblIngredientsBindingSource
+            // 
+            this.tblIngredientsBindingSource.DataMember = "tblIngredients";
             // 
             // AddIngredients_Form
             // 
@@ -428,11 +462,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.invTablesDatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -462,15 +497,25 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource tblIngredientsBindingSource1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource tblIngredientsBindingSource2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ingredient_Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ingredient_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn mROPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn unitDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn unitcostDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn supplierDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button delbtn;
+        private System.Windows.Forms.Button updatebtn;
+        private InvTablesDatabaseDataSet invTablesDatabaseDataSet;
+        private System.Windows.Forms.BindingSource tblIngredientsBindingSource3;
+        private InvTablesDatabaseDataSetTableAdapters.tblIngredientsTableAdapter tblIngredientsTableAdapter;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ingredientIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ingredientNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }

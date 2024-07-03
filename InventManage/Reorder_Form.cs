@@ -145,10 +145,12 @@ namespace InventManage
                 }
             }
 
+            string currentDate = DateTime.Now.ToString("yyyy-MM-dd");
             SaveFileDialog saveFileDialog = new SaveFileDialog
             {
                 Filter = "Text file (*.txt)|*.txt",
-                Title = "Save Reorder List"
+                Title = "Save Reorder List",
+                FileName = $"Order List {currentDate}.txt"
             };
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -157,5 +159,6 @@ namespace InventManage
                 MessageBox.Show("Reorder list saved successfully.", "Success");
             }
         }
+
     }
 }

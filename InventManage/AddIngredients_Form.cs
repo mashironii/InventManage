@@ -24,6 +24,8 @@ namespace InventManage
 
         private void AddIngredients_Form_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'invTablesDatabaseDataSet.tblIngredients' table. You can move, or remove it, as needed.
+            this.tblIngredientsTableAdapter.Fill(this.invTablesDatabaseDataSet.tblIngredients);
         }
 
         private void GetUserRecord()
@@ -189,6 +191,86 @@ namespace InventManage
                     }
                 }
             }
+        }
+
+        private void updatebtn_Click(object sender, EventArgs e)
+        {
+            if (IngredIDtextBox1.Text == "")
+            {
+                MessageBox.Show("Please enter Ingredient Name to update.");
+            }
+            else if (IngNametextBox2.Text == "" || MROPtextBox3.Text == "" || UnitCosttextBox5.Text == "")
+            {
+                MessageBox.Show("Please enter all required information");
+            }
+            else
+            {
+                string IngName = IngNametextBox2.Text;
+                string MROP = MROPtextBox3.Text;
+                string unitCost = UnitCosttextBox5.Text;
+                string unit = UnitcomboBox1.SelectedItem.ToString();
+                string categ = CategorycomboBox2.SelectedItem.ToString();
+                string supp = SuppliercomboBox3.SelectedItem.ToString();
+
+                string updateqry = "UPDATE tblIngredients SET Ingredient_Name = @Ingredient_Name, MROP = @MROP, Unit = @Unit, Unit_Cost = @Unit_Cost, Category = @Category, Supplier = @Supplier WHERE Ingredient_Name = @SearchName";
+
+                using (SqlCommand cmd = new SqlCommand(updateqry, cn))
+                {
+                    cmd.Parameters.AddWithValue("@Ingredient_Name", IngName);
+                    cmd.Parameters.AddWithValue("@MROP", MROP);
+                    cmd.Parameters.AddWithValue("@Unit", unit);
+                    cmd.Parameters.AddWithValue("@Unit_Cost", unitCost);
+                    cmd.Parameters.AddWithValue("@Category", categ);
+                    cmd.Parameters.AddWithValue("@Supplier", supp);
+                    cmd.Parameters.AddWithValue("@SearchName", IngredIDtextBox1.Text.Trim());
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Ingredient record updated successfully!");
+                GetUserRecord();
+
+                IngNametextBox2.Text = "";
+                MROPtextBox3.Text = "";
+                UnitCosttextBox5.Text = "";
+                UnitcomboBox1.Text = "Kilogram";
+                CategorycomboBox2.Text = "Vegetables";
+                SuppliercomboBox3.Text = "Local";
+                IngredIDtextBox1.Text = "";
+            }
+        }
+
+        private void delbtn_Click(object sender, EventArgs e)
+        {
+            if (IngredIDtextBox1.Text == "")
+            {
+                MessageBox.Show("Please enter Ingredient Name to delete.");
+            }
+            else
+            {
+                string deleteqry = "DELETE FROM tblIngredients WHERE Ingredient_Name = @Ingredient_Name";
+
+                using (SqlCommand cmd = new SqlCommand(deleteqry, cn))
+                {
+                    cmd.Parameters.AddWithValue("@Ingredient_Name", IngredIDtextBox1.Text.Trim());
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Ingredient record deleted successfully!");
+                GetUserRecord();
+
+                IngNametextBox2.Text = "";
+                MROPtextBox3.Text = "";
+                UnitCosttextBox5.Text = "";
+                UnitcomboBox1.Text = "Kilogram";
+                CategorycomboBox2.Text = "Vegetables";
+                SuppliercomboBox3.Text = "Local";
+                IngredIDtextBox1.Text = "";
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GetUserRecord();
         }
     }
 }

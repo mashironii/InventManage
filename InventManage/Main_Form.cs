@@ -164,5 +164,10 @@ namespace InventManage
             Reorder_Form reorder_Form = new Reorder_Form();
             reorder_Form.ShowDialog();
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

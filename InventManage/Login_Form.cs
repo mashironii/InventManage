@@ -80,6 +80,12 @@ namespace InventManage
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RegisterUser_Form reg = new RegisterUser_Form();
+            reg.ShowDialog();
+        }
     }
 }
 

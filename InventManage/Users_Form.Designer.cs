@@ -33,13 +33,13 @@
             System.Windows.Forms.Label last_NameLabel;
             System.Windows.Forms.Label positionLabel;
             System.Windows.Forms.Label passwordLabel;
+            System.Windows.Forms.Label UserIDLabel;
             this.first_NameTextBox = new System.Windows.Forms.TextBox();
             this.last_NameTextBox = new System.Windows.Forms.TextBox();
             this.positionComboBox = new System.Windows.Forms.ComboBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.AddPanel = new System.Windows.Forms.Panel();
-            this.FindBtn = new System.Windows.Forms.Button();
             this.UpdateBtn = new System.Windows.Forms.Button();
             this.DelBtn = new System.Windows.Forms.Button();
             this.expandbtn = new System.Windows.Forms.Button();
@@ -52,16 +52,18 @@
             this.positionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblUserBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.invTablesDatabaseDataSet = new InventManage.InvTablesDatabaseDataSet();
+            this.tblUserTableAdapter2 = new InventManage.InvTablesDatabaseDataSetTableAdapters.tblUserTableAdapter();
             this.tblUserBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.tblUserBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblUserBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblUserTableAdapter2 = new InventManage.InvTablesDatabaseDataSetTableAdapters.tblUserTableAdapter();
+            this.UserIDtxtbx = new System.Windows.Forms.TextBox();
             first_NameLabel = new System.Windows.Forms.Label();
             last_NameLabel = new System.Windows.Forms.Label();
             positionLabel = new System.Windows.Forms.Label();
             passwordLabel = new System.Windows.Forms.Label();
+            UserIDLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.AddPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -78,7 +80,7 @@
             // 
             first_NameLabel.AutoSize = true;
             first_NameLabel.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            first_NameLabel.Location = new System.Drawing.Point(9, 185);
+            first_NameLabel.Location = new System.Drawing.Point(5, 239);
             first_NameLabel.Name = "first_NameLabel";
             first_NameLabel.Size = new System.Drawing.Size(120, 31);
             first_NameLabel.TabIndex = 3;
@@ -89,7 +91,7 @@
             // 
             last_NameLabel.AutoSize = true;
             last_NameLabel.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            last_NameLabel.Location = new System.Drawing.Point(9, 90);
+            last_NameLabel.Location = new System.Drawing.Point(5, 155);
             last_NameLabel.Name = "last_NameLabel";
             last_NameLabel.Size = new System.Drawing.Size(120, 31);
             last_NameLabel.TabIndex = 5;
@@ -121,7 +123,7 @@
             // first_NameTextBox
             // 
             this.first_NameTextBox.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.first_NameTextBox.Location = new System.Drawing.Point(15, 219);
+            this.first_NameTextBox.Location = new System.Drawing.Point(11, 273);
             this.first_NameTextBox.Name = "first_NameTextBox";
             this.first_NameTextBox.Size = new System.Drawing.Size(272, 38);
             this.first_NameTextBox.TabIndex = 4;
@@ -130,7 +132,7 @@
             // last_NameTextBox
             // 
             this.last_NameTextBox.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.last_NameTextBox.Location = new System.Drawing.Point(15, 124);
+            this.last_NameTextBox.Location = new System.Drawing.Point(11, 189);
             this.last_NameTextBox.Name = "last_NameTextBox";
             this.last_NameTextBox.Size = new System.Drawing.Size(174, 38);
             this.last_NameTextBox.TabIndex = 6;
@@ -157,6 +159,7 @@
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(193, 38);
             this.passwordTextBox.TabIndex = 10;
+            this.passwordTextBox.UseSystemPasswordChar = true;
             this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
             // 
             // flowLayoutPanel1
@@ -165,12 +168,13 @@
             this.flowLayoutPanel1.Controls.Add(this.dataGridView1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 1);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(608, 538);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(608, 560);
             this.flowLayoutPanel1.TabIndex = 13;
             // 
             // AddPanel
             // 
-            this.AddPanel.Controls.Add(this.FindBtn);
+            this.AddPanel.Controls.Add(this.UserIDtxtbx);
+            this.AddPanel.Controls.Add(UserIDLabel);
             this.AddPanel.Controls.Add(this.UpdateBtn);
             this.AddPanel.Controls.Add(this.DelBtn);
             this.AddPanel.Controls.Add(this.expandbtn);
@@ -188,17 +192,6 @@
             this.AddPanel.Name = "AddPanel";
             this.AddPanel.Size = new System.Drawing.Size(593, 87);
             this.AddPanel.TabIndex = 15;
-            // 
-            // FindBtn
-            // 
-            this.FindBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FindBtn.Location = new System.Drawing.Point(211, 124);
-            this.FindBtn.Name = "FindBtn";
-            this.FindBtn.Size = new System.Drawing.Size(76, 35);
-            this.FindBtn.TabIndex = 14;
-            this.FindBtn.Text = "Find";
-            this.FindBtn.UseVisualStyleBackColor = true;
-            this.FindBtn.Click += new System.EventHandler(this.FindBtn_Click);
             // 
             // UpdateBtn
             // 
@@ -251,7 +244,7 @@
             this.Addbtn.Name = "Addbtn";
             this.Addbtn.Size = new System.Drawing.Size(170, 45);
             this.Addbtn.TabIndex = 0;
-            this.Addbtn.Text = "Add User";
+            this.Addbtn.Text = "Find User";
             this.Addbtn.UseVisualStyleBackColor = true;
             this.Addbtn.Click += new System.EventHandler(this.Addbtn_Click);
             // 
@@ -313,6 +306,10 @@
             this.invTablesDatabaseDataSet.DataSetName = "InvTablesDatabaseDataSet";
             this.invTablesDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // tblUserTableAdapter2
+            // 
+            this.tblUserTableAdapter2.ClearBeforeFill = true;
+            // 
             // tblUserBindingSource3
             // 
             this.tblUserBindingSource3.DataMember = "tblUser";
@@ -325,15 +322,29 @@
             // 
             this.tblUserBindingSource2.DataMember = "tblUser";
             // 
-            // tblUserTableAdapter2
+            // UserIDtxtbx
             // 
-            this.tblUserTableAdapter2.ClearBeforeFill = true;
+            this.UserIDtxtbx.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserIDtxtbx.Location = new System.Drawing.Point(11, 115);
+            this.UserIDtxtbx.Name = "UserIDtxtbx";
+            this.UserIDtxtbx.Size = new System.Drawing.Size(174, 38);
+            this.UserIDtxtbx.TabIndex = 15;
+            // 
+            // UserIDLabel
+            // 
+            UserIDLabel.AutoSize = true;
+            UserIDLabel.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            UserIDLabel.Location = new System.Drawing.Point(5, 81);
+            UserIDLabel.Name = "UserIDLabel";
+            UserIDLabel.Size = new System.Drawing.Size(94, 31);
+            UserIDLabel.TabIndex = 14;
+            UserIDLabel.Text = "User ID:";
             // 
             // Users_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 539);
+            this.ClientSize = new System.Drawing.Size(614, 564);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Users_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -384,6 +395,6 @@
         private InvTablesDatabaseDataSetTableAdapters.tblUserTableAdapter tblUserTableAdapter2;
         private System.Windows.Forms.Button UpdateBtn;
         private System.Windows.Forms.Button DelBtn;
-        private System.Windows.Forms.Button FindBtn;
+        private System.Windows.Forms.TextBox UserIDtxtbx;
     }
 }

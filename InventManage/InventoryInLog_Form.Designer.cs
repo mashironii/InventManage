@@ -95,6 +95,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "InventoryInLog_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InventoryInLog_Form";
             this.Load += new System.EventHandler(this.InventoryInLog_Form_Load);
             this.panel1.ResumeLayout(false);

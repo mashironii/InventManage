@@ -155,11 +155,10 @@
             // AdminPanel
             // 
             this.AdminPanel.Controls.Add(this.panel10);
-            this.AdminPanel.Controls.Add(this.panel21);
             this.AdminPanel.Controls.Add(this.panel23);
             this.AdminPanel.Controls.Add(this.panel6);
             this.AdminPanel.Controls.Add(this.panel11);
-            this.AdminPanel.Location = new System.Drawing.Point(6, 633);
+            this.AdminPanel.Location = new System.Drawing.Point(9, 715);
             this.AdminPanel.Name = "AdminPanel";
             this.AdminPanel.Size = new System.Drawing.Size(247, 106);
             this.AdminPanel.TabIndex = 10;
@@ -200,7 +199,7 @@
             // 
             this.panel21.Controls.Add(this.InventoryInLogBtn);
             this.panel21.Controls.Add(this.panel22);
-            this.panel21.Location = new System.Drawing.Point(3, 109);
+            this.panel21.Location = new System.Drawing.Point(3, 483);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(248, 74);
             this.panel21.TabIndex = 10;
@@ -231,7 +230,7 @@
             // 
             this.panel23.Controls.Add(this.UseLogBtn);
             this.panel23.Controls.Add(this.panel24);
-            this.panel23.Location = new System.Drawing.Point(3, 189);
+            this.panel23.Location = new System.Drawing.Point(3, 109);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(248, 74);
             this.panel23.TabIndex = 11;
@@ -262,7 +261,7 @@
             // 
             this.panel6.Controls.Add(this.button2);
             this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(3, 269);
+            this.panel6.Location = new System.Drawing.Point(3, 189);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(248, 74);
             this.panel6.TabIndex = 5;
@@ -293,7 +292,7 @@
             // 
             this.panel11.Controls.Add(this.button3);
             this.panel11.Controls.Add(this.panel12);
-            this.panel11.Location = new System.Drawing.Point(3, 349);
+            this.panel11.Location = new System.Drawing.Point(3, 269);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(248, 74);
             this.panel11.TabIndex = 6;
@@ -339,11 +338,13 @@
             this.flowLayoutPanel1.Controls.Add(this.panel17);
             this.flowLayoutPanel1.Controls.Add(this.panel4);
             this.flowLayoutPanel1.Controls.Add(this.panel25);
+            this.flowLayoutPanel1.Controls.Add(this.panel21);
             this.flowLayoutPanel1.Controls.Add(this.panel8);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 72);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(253, 562);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(253, 640);
             this.flowLayoutPanel1.TabIndex = 5;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // GenerateReorderBtn
             // 
@@ -504,7 +505,7 @@
             // 
             this.panel8.Controls.Add(this.exitbtn);
             this.panel8.Controls.Add(this.panel9);
-            this.panel8.Location = new System.Drawing.Point(3, 483);
+            this.panel8.Location = new System.Drawing.Point(3, 563);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(248, 74);
             this.panel8.TabIndex = 5;

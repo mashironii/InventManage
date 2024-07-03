@@ -41,6 +41,11 @@
             this.invTablesDatabaseDataSet = new InventManage.InvTablesDatabaseDataSet();
             this.tblDishesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.newdishname = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.findbtn = new System.Windows.Forms.Button();
             this.UnitCombo = new System.Windows.Forms.ComboBox();
             this.DishNameCombo = new System.Windows.Forms.ComboBox();
             this.tblDishesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -58,11 +63,6 @@
             this.tblDishIngredientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblIngredientsTableAdapter = new InventManage.InvTablesDatabaseDataSetTableAdapters.tblIngredientsTableAdapter();
             this.tblDishesTableAdapter = new InventManage.InvTablesDatabaseDataSetTableAdapters.tblDishesTableAdapter();
-            this.findbtn = new System.Windows.Forms.Button();
-            this.newdishname = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             DishLbl = new System.Windows.Forms.Label();
             dishIngrLbl = new System.Windows.Forms.Label();
             QuantityReqLbl = new System.Windows.Forms.Label();
@@ -73,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.invTablesDatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblDishesBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblDishesBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -80,7 +81,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblDishIngredientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblDishIngredientsBindingSource1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // DishLbl
@@ -122,6 +122,16 @@
             DishIngLbl.Size = new System.Drawing.Size(128, 31);
             DishIngLbl.TabIndex = 28;
             DishIngLbl.Text = "Dish Name:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(3, 10);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(178, 31);
+            label1.TabIndex = 31;
+            label1.Text = "New Dish Name:";
             // 
             // dataGridView1
             // 
@@ -186,6 +196,58 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1007, 702);
             this.panel1.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(label1);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.newdishname);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Location = new System.Drawing.Point(25, 158);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(427, 13);
+            this.panel2.TabIndex = 35;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(325, 46);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(88, 38);
+            this.button3.TabIndex = 34;
+            this.button3.Text = "Update";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // newdishname
+            // 
+            this.newdishname.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newdishname.Location = new System.Drawing.Point(9, 44);
+            this.newdishname.Name = "newdishname";
+            this.newdishname.Size = new System.Drawing.Size(289, 38);
+            this.newdishname.TabIndex = 32;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(325, 90);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(88, 38);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // findbtn
+            // 
+            this.findbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.findbtn.Location = new System.Drawing.Point(350, 114);
+            this.findbtn.Name = "findbtn";
+            this.findbtn.Size = new System.Drawing.Size(88, 38);
+            this.findbtn.TabIndex = 30;
+            this.findbtn.Text = "Find";
+            this.findbtn.UseVisualStyleBackColor = true;
+            this.findbtn.Click += new System.EventHandler(this.findbtn_Click);
             // 
             // UnitCombo
             // 
@@ -317,68 +379,6 @@
             // 
             this.tblDishesTableAdapter.ClearBeforeFill = true;
             // 
-            // findbtn
-            // 
-            this.findbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.findbtn.Location = new System.Drawing.Point(350, 114);
-            this.findbtn.Name = "findbtn";
-            this.findbtn.Size = new System.Drawing.Size(88, 38);
-            this.findbtn.TabIndex = 30;
-            this.findbtn.Text = "Find";
-            this.findbtn.UseVisualStyleBackColor = true;
-            this.findbtn.Click += new System.EventHandler(this.findbtn_Click);
-            // 
-            // newdishname
-            // 
-            this.newdishname.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newdishname.Location = new System.Drawing.Point(9, 44);
-            this.newdishname.Name = "newdishname";
-            this.newdishname.Size = new System.Drawing.Size(289, 38);
-            this.newdishname.TabIndex = 32;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(3, 10);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(178, 31);
-            label1.TabIndex = 31;
-            label1.Text = "New Dish Name:";
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(324, 44);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 38);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(324, 92);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 38);
-            this.button3.TabIndex = 34;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(label1);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.newdishname);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Location = new System.Drawing.Point(25, 158);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(427, 13);
-            this.panel2.TabIndex = 35;
-            // 
             // AddDish_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,6 +395,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblDishesBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblDishesBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -402,8 +404,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblDishIngredientsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblDishIngredientsBindingSource1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
