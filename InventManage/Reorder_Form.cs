@@ -132,7 +132,17 @@ namespace InventManage
             {
                 if (row.Cells["Ingredient_Id"].Value != null)
                 {
-                    reorderList.AppendLine($"Ingredient: {row.Cells["Ingredient_Name"].Value}, Quantity Requested (Kg/L): {row.Cells["Quantity_Requested"].Value}");
+                    string ingredientName = row.Cells["Ingredient_Name"].Value.ToString();
+                    string quantityRequested = row.Cells["Quantity_Requested"].Value.ToString();
+
+                    // Calculate dynamic tab spacing based on ingredient name length
+                    string tabSpacing = "\t\t";
+                    if (ingredientName.Length < 8)
+                        tabSpacing += "\t\t";
+                    else if (ingredientName.Length < 16)
+                        tabSpacing += "\t";
+
+                    reorderList.AppendLine($"Ingredient:\t{ingredientName}{tabSpacing}Quantity Requested (Kg/L): {quantityRequested}");
                 }
             }
 
@@ -141,7 +151,17 @@ namespace InventManage
             {
                 if (row.Cells["Ingredient_Name_Manual"].Value != null)
                 {
-                    reorderList.AppendLine($"Ingredient: {row.Cells["Ingredient_Name_Manual"].FormattedValue}, Quantity Requested (Kg/L): {row.Cells["Quantity_Requested_Manual"].Value}");
+                    string ingredientNameManual = row.Cells["Ingredient_Name_Manual"].FormattedValue.ToString();
+                    string quantityRequestedManual = row.Cells["Quantity_Requested_Manual"].Value.ToString();
+
+                    // Calculate dynamic tab spacing based on ingredient name length
+                    string tabSpacing = "\t\t";
+                    if (ingredientNameManual.Length < 8)
+                        tabSpacing += "\t\t";
+                    else if (ingredientNameManual.Length < 16)
+                        tabSpacing += "\t";
+
+                    reorderList.AppendLine($"Ingredient:\t{ingredientNameManual}{tabSpacing}Quantity Requested (Kg/L): {quantityRequestedManual}");
                 }
             }
 
@@ -159,6 +179,7 @@ namespace InventManage
                 MessageBox.Show("Reorder list saved successfully.", "Success");
             }
         }
+
 
     }
 }

@@ -40,9 +40,9 @@
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.AddPanel = new System.Windows.Forms.Panel();
+            this.UserIDtxtbx = new System.Windows.Forms.TextBox();
             this.UpdateBtn = new System.Windows.Forms.Button();
             this.DelBtn = new System.Windows.Forms.Button();
-            this.expandbtn = new System.Windows.Forms.Button();
             this.backbtn = new System.Windows.Forms.Button();
             this.Addbtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -58,7 +58,6 @@
             this.tblUserBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.UserIDtxtbx = new System.Windows.Forms.TextBox();
             first_NameLabel = new System.Windows.Forms.Label();
             last_NameLabel = new System.Windows.Forms.Label();
             positionLabel = new System.Windows.Forms.Label();
@@ -120,6 +119,16 @@
             passwordLabel.Text = "Password:";
             passwordLabel.Click += new System.EventHandler(this.passwordLabel_Click);
             // 
+            // UserIDLabel
+            // 
+            UserIDLabel.AutoSize = true;
+            UserIDLabel.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            UserIDLabel.Location = new System.Drawing.Point(5, 81);
+            UserIDLabel.Name = "UserIDLabel";
+            UserIDLabel.Size = new System.Drawing.Size(94, 31);
+            UserIDLabel.TabIndex = 14;
+            UserIDLabel.Text = "User ID:";
+            // 
             // first_NameTextBox
             // 
             this.first_NameTextBox.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,7 +186,6 @@
             this.AddPanel.Controls.Add(UserIDLabel);
             this.AddPanel.Controls.Add(this.UpdateBtn);
             this.AddPanel.Controls.Add(this.DelBtn);
-            this.AddPanel.Controls.Add(this.expandbtn);
             this.AddPanel.Controls.Add(this.first_NameTextBox);
             this.AddPanel.Controls.Add(this.backbtn);
             this.AddPanel.Controls.Add(this.passwordTextBox);
@@ -193,10 +201,18 @@
             this.AddPanel.Size = new System.Drawing.Size(593, 87);
             this.AddPanel.TabIndex = 15;
             // 
+            // UserIDtxtbx
+            // 
+            this.UserIDtxtbx.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserIDtxtbx.Location = new System.Drawing.Point(11, 115);
+            this.UserIDtxtbx.Name = "UserIDtxtbx";
+            this.UserIDtxtbx.Size = new System.Drawing.Size(174, 38);
+            this.UserIDtxtbx.TabIndex = 15;
+            // 
             // UpdateBtn
             // 
-            this.UpdateBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateBtn.Location = new System.Drawing.Point(195, 22);
+            this.UpdateBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBtn.Location = new System.Drawing.Point(218, 21);
             this.UpdateBtn.Name = "UpdateBtn";
             this.UpdateBtn.Size = new System.Drawing.Size(108, 45);
             this.UpdateBtn.TabIndex = 13;
@@ -206,8 +222,8 @@
             // 
             // DelBtn
             // 
-            this.DelBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DelBtn.Location = new System.Drawing.Point(309, 22);
+            this.DelBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DelBtn.Location = new System.Drawing.Point(332, 21);
             this.DelBtn.Name = "DelBtn";
             this.DelBtn.Size = new System.Drawing.Size(108, 45);
             this.DelBtn.TabIndex = 12;
@@ -215,23 +231,12 @@
             this.DelBtn.UseVisualStyleBackColor = true;
             this.DelBtn.Click += new System.EventHandler(this.DelBtn_Click);
             // 
-            // expandbtn
-            // 
-            this.expandbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.expandbtn.Location = new System.Drawing.Point(537, 22);
-            this.expandbtn.Name = "expandbtn";
-            this.expandbtn.Size = new System.Drawing.Size(48, 45);
-            this.expandbtn.TabIndex = 11;
-            this.expandbtn.Text = "V";
-            this.expandbtn.UseVisualStyleBackColor = true;
-            this.expandbtn.Click += new System.EventHandler(this.expandbtn_Click);
-            // 
             // backbtn
             // 
-            this.backbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backbtn.Location = new System.Drawing.Point(423, 22);
+            this.backbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backbtn.Location = new System.Drawing.Point(446, 21);
             this.backbtn.Name = "backbtn";
-            this.backbtn.Size = new System.Drawing.Size(108, 45);
+            this.backbtn.Size = new System.Drawing.Size(95, 45);
             this.backbtn.TabIndex = 1;
             this.backbtn.Text = "Back";
             this.backbtn.UseVisualStyleBackColor = true;
@@ -239,8 +244,8 @@
             // 
             // Addbtn
             // 
-            this.Addbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addbtn.Location = new System.Drawing.Point(15, 22);
+            this.Addbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Addbtn.Location = new System.Drawing.Point(38, 21);
             this.Addbtn.Name = "Addbtn";
             this.Addbtn.Size = new System.Drawing.Size(170, 45);
             this.Addbtn.TabIndex = 0;
@@ -260,7 +265,7 @@
             this.dataGridView1.DataSource = this.tblUserBindingSource4;
             this.dataGridView1.Location = new System.Drawing.Point(3, 96);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(593, 229);
+            this.dataGridView1.Size = new System.Drawing.Size(595, 229);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -322,30 +327,14 @@
             // 
             this.tblUserBindingSource2.DataMember = "tblUser";
             // 
-            // UserIDtxtbx
-            // 
-            this.UserIDtxtbx.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserIDtxtbx.Location = new System.Drawing.Point(11, 115);
-            this.UserIDtxtbx.Name = "UserIDtxtbx";
-            this.UserIDtxtbx.Size = new System.Drawing.Size(174, 38);
-            this.UserIDtxtbx.TabIndex = 15;
-            // 
-            // UserIDLabel
-            // 
-            UserIDLabel.AutoSize = true;
-            UserIDLabel.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            UserIDLabel.Location = new System.Drawing.Point(5, 81);
-            UserIDLabel.Name = "UserIDLabel";
-            UserIDLabel.Size = new System.Drawing.Size(94, 31);
-            UserIDLabel.TabIndex = 14;
-            UserIDLabel.Text = "User ID:";
-            // 
             // Users_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 564);
+            this.ClientSize = new System.Drawing.Size(602, 564);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Users_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Users_Form";
@@ -384,7 +373,6 @@
         private System.Windows.Forms.BindingSource tblUserBindingSource1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource tblUserBindingSource2;
-        private System.Windows.Forms.Button expandbtn;
         private System.Windows.Forms.BindingSource tblUserBindingSource3;
         private System.Windows.Forms.DataGridViewTextBoxColumn User_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullNameDataGridViewTextBoxColumn;

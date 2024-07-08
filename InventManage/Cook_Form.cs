@@ -25,6 +25,7 @@ namespace InventManage
             this.mainForm = mainForm;
             cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Admin\source\repos\InventManage\InventManage\InvDatabase.mdf;Integrated Security=True");
             cn.Open();
+            
         }
 
         private void Cook_Form_Load(object sender, EventArgs e)

@@ -43,8 +43,8 @@
             this.empIDtxt = new System.Windows.Forms.Label();
             this.Emptxtbx = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.LoginBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.LoginBtn = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -162,7 +162,6 @@
             this.PassTxtBx.PasswordChar = '*';
             this.PassTxtBx.Size = new System.Drawing.Size(398, 50);
             this.PassTxtBx.TabIndex = 1;
-            this.PassTxtBx.Text = "1234";
             this.PassTxtBx.UseSystemPasswordChar = true;
             // 
             // empIDtxt
@@ -171,9 +170,9 @@
             this.empIDtxt.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empIDtxt.Location = new System.Drawing.Point(28, 57);
             this.empIDtxt.Name = "empIDtxt";
-            this.empIDtxt.Size = new System.Drawing.Size(158, 32);
+            this.empIDtxt.Size = new System.Drawing.Size(248, 32);
             this.empIDtxt.TabIndex = 2;
-            this.empIDtxt.Text = "Username:";
+            this.empIDtxt.Text = "Admin Username:";
             // 
             // Emptxtbx
             // 
@@ -182,7 +181,6 @@
             this.Emptxtbx.Name = "Emptxtbx";
             this.Emptxtbx.Size = new System.Drawing.Size(398, 50);
             this.Emptxtbx.TabIndex = 0;
-            this.Emptxtbx.Text = "dollyadmin";
             // 
             // panel3
             // 
@@ -190,32 +188,35 @@
             this.panel3.Controls.Add(this.LoginBtn);
             this.panel3.Location = new System.Drawing.Point(3, 516);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(448, 140);
+            this.panel3.Size = new System.Drawing.Size(448, 66);
             this.panel3.TabIndex = 6;
-            // 
-            // LoginBtn
-            // 
-            this.LoginBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.LoginBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginBtn.Location = new System.Drawing.Point(99, 0);
-            this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(227, 66);
-            this.LoginBtn.TabIndex = 0;
-            this.LoginBtn.Text = "Log In";
-            this.LoginBtn.UseVisualStyleBackColor = true;
-            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(135, 81);
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(228, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 44);
+            this.button1.Size = new System.Drawing.Size(123, 42);
             this.button1.TabIndex = 1;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // LoginBtn
+            // 
+            this.LoginBtn.BackColor = System.Drawing.Color.Thistle;
+            this.LoginBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.LoginBtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.LoginBtn.FlatAppearance.BorderSize = 0;
+            this.LoginBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBtn.Location = new System.Drawing.Point(86, 3);
+            this.LoginBtn.Name = "LoginBtn";
+            this.LoginBtn.Size = new System.Drawing.Size(123, 44);
+            this.LoginBtn.TabIndex = 0;
+            this.LoginBtn.Text = "Log In";
+            this.LoginBtn.UseVisualStyleBackColor = false;
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
             // AdminLogin_Form
             // 
@@ -223,6 +224,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1091, 718);
             this.Controls.Add(this.panel5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AdminLogin_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminLogin_Form";

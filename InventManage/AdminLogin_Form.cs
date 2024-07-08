@@ -30,7 +30,7 @@ namespace InventManage
                 if (Emptxtbx.Text == "dollyadmin" && PassTxtBx.Text == "1234")
                 {
                     //247, 431 > 247, 106
-                    mainForm.ResizeAdminPanel(new Size(247, 431));
+                    mainForm.ResizeAdminPanel(new Size(247, 468));
                     this.Close();
                 } else
                 {

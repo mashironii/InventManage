@@ -37,7 +37,7 @@ namespace InventManage
         {
             if (panel1.Height == 70)
             {
-                panel1.Height = 186;
+                panel1.Height = 157;
             }
 
             if (string.IsNullOrEmpty(supptxtbx.Text))
@@ -115,9 +115,9 @@ namespace InventManage
 
         private void updatebtn_Click(object sender, EventArgs e)
         {
-            if (panel1.Height == 186)
+            if (panel1.Height == 157)
             {
-                panel1.Height = 220;
+                panel1.Height = 198;
             }
             if (string.IsNullOrEmpty(supptxtbx.Text))
             {

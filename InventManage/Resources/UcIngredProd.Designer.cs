@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.MROPLBL = new System.Windows.Forms.Label();
             this.Ingredientlbl = new System.Windows.Forms.Label();
             this.AmntLbl = new System.Windows.Forms.Label();
             this.IndicatorPnl = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.Unitlbl = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.MROPLBL = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.IndicatorPnl.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -50,9 +50,24 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(128, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(224, 140);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(224, 110);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
+            // MROPLBL
+            // 
+            this.MROPLBL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MROPLBL.BackColor = System.Drawing.Color.Transparent;
+            this.MROPLBL.Font = new System.Drawing.Font("Arial Narrow", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MROPLBL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.MROPLBL.Location = new System.Drawing.Point(3, 0);
+            this.MROPLBL.Name = "MROPLBL";
+            this.MROPLBL.Size = new System.Drawing.Size(119, 0);
+            this.MROPLBL.TabIndex = 2;
+            this.MROPLBL.Text = "MROp";
+            this.MROPLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Ingredientlbl
             // 
@@ -61,7 +76,7 @@
             this.Ingredientlbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Ingredientlbl.Location = new System.Drawing.Point(3, 0);
             this.Ingredientlbl.Name = "Ingredientlbl";
-            this.Ingredientlbl.Size = new System.Drawing.Size(215, 140);
+            this.Ingredientlbl.Size = new System.Drawing.Size(215, 110);
             this.Ingredientlbl.TabIndex = 1;
             this.Ingredientlbl.Text = "Ingredient";
             this.Ingredientlbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -74,7 +89,7 @@
             this.AmntLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.AmntLbl.Location = new System.Drawing.Point(0, 0);
             this.AmntLbl.Name = "AmntLbl";
-            this.AmntLbl.Size = new System.Drawing.Size(122, 80);
+            this.AmntLbl.Size = new System.Drawing.Size(122, 49);
             this.AmntLbl.TabIndex = 0;
             this.AmntLbl.Text = "99";
             this.AmntLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -87,13 +102,13 @@
             this.IndicatorPnl.Dock = System.Windows.Forms.DockStyle.Left;
             this.IndicatorPnl.Location = new System.Drawing.Point(0, 0);
             this.IndicatorPnl.Name = "IndicatorPnl";
-            this.IndicatorPnl.Size = new System.Drawing.Size(125, 140);
+            this.IndicatorPnl.Size = new System.Drawing.Size(125, 110);
             this.IndicatorPnl.TabIndex = 1;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.Unitlbl);
-            this.panel5.Location = new System.Drawing.Point(3, 92);
+            this.panel5.Location = new System.Drawing.Point(3, 62);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(119, 43);
             this.panel5.TabIndex = 1;
@@ -118,23 +133,8 @@
             this.panel4.Controls.Add(this.AmntLbl);
             this.panel4.Location = new System.Drawing.Point(3, 6);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(119, 80);
+            this.panel4.Size = new System.Drawing.Size(119, 50);
             this.panel4.TabIndex = 0;
-            // 
-            // MROPLBL
-            // 
-            this.MROPLBL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MROPLBL.BackColor = System.Drawing.Color.Transparent;
-            this.MROPLBL.Font = new System.Drawing.Font("Arial Narrow", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MROPLBL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.MROPLBL.Location = new System.Drawing.Point(3, 0);
-            this.MROPLBL.Name = "MROPLBL";
-            this.MROPLBL.Size = new System.Drawing.Size(119, 0);
-            this.MROPLBL.TabIndex = 2;
-            this.MROPLBL.Text = "MROp";
-            this.MROPLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UcIngredProd
             // 
@@ -143,7 +143,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.IndicatorPnl);
             this.Name = "UcIngredProd";
-            this.Size = new System.Drawing.Size(352, 140);
+            this.Size = new System.Drawing.Size(352, 110);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.IndicatorPnl.ResumeLayout(false);
             this.panel5.ResumeLayout(false);

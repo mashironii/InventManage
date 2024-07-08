@@ -38,28 +38,28 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dateAddedPicker = new System.Windows.Forms.DateTimePicker();
             this.SupplierCombo = new System.Windows.Forms.ComboBox();
-            this.tblSupplierBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblSupplierBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.invTablesDatabaseDataSet = new InventManage.InvTablesDatabaseDataSet();
             this.button1 = new System.Windows.Forms.Button();
             this.AddInvenBtn = new System.Windows.Forms.Button();
+            this.tblSupplierBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.tblIngredientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblIngredientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblSupplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.invTablesDatabaseDataSet = new InventManage.InvTablesDatabaseDataSet();
-            this.tblSupplierBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.tblSupplierTableAdapter = new InventManage.InvTablesDatabaseDataSetTableAdapters.tblSupplierTableAdapter();
             DishIngLbl = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.IngredientGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblSupplierBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invTablesDatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblSupplierBindingSource1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblSupplierBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invTablesDatabaseDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblSupplierBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // DishIngLbl
@@ -76,7 +76,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(58, 113);
+            label1.Location = new System.Drawing.Point(58, 124);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(66, 31);
             label1.TabIndex = 31;
@@ -126,10 +126,11 @@
             // dateAddedPicker
             // 
             this.dateAddedPicker.CustomFormat = "yyyy-mm-dd";
+            this.dateAddedPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateAddedPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateAddedPicker.Location = new System.Drawing.Point(163, 124);
+            this.dateAddedPicker.Location = new System.Drawing.Point(163, 129);
             this.dateAddedPicker.Name = "dateAddedPicker";
-            this.dateAddedPicker.Size = new System.Drawing.Size(205, 20);
+            this.dateAddedPicker.Size = new System.Drawing.Size(205, 26);
             this.dateAddedPicker.TabIndex = 30;
             // 
             // SupplierCombo
@@ -142,16 +143,22 @@
             this.SupplierCombo.Size = new System.Drawing.Size(238, 33);
             this.SupplierCombo.TabIndex = 28;
             // 
-            // tblSupplierBindingSource1
+            // tblSupplierBindingSource2
             // 
-            this.tblSupplierBindingSource1.DataMember = "tblSupplier";
+            this.tblSupplierBindingSource2.DataMember = "tblSupplier";
+            this.tblSupplierBindingSource2.DataSource = this.invTablesDatabaseDataSet;
+            // 
+            // invTablesDatabaseDataSet
+            // 
+            this.invTablesDatabaseDataSet.DataSetName = "InvTablesDatabaseDataSet";
+            this.invTablesDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(305, 21);
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(324, 21);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 45);
+            this.button1.Size = new System.Drawing.Size(85, 45);
             this.button1.TabIndex = 2;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
@@ -159,14 +166,18 @@
             // 
             // AddInvenBtn
             // 
-            this.AddInvenBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddInvenBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddInvenBtn.Location = new System.Drawing.Point(12, 21);
             this.AddInvenBtn.Name = "AddInvenBtn";
-            this.AddInvenBtn.Size = new System.Drawing.Size(264, 45);
+            this.AddInvenBtn.Size = new System.Drawing.Size(306, 45);
             this.AddInvenBtn.TabIndex = 1;
             this.AddInvenBtn.Text = "Add to Inventory";
             this.AddInvenBtn.UseVisualStyleBackColor = true;
             this.AddInvenBtn.Click += new System.EventHandler(this.AddInvenBtn_Click);
+            // 
+            // tblSupplierBindingSource1
+            // 
+            this.tblSupplierBindingSource1.DataMember = "tblSupplier";
             // 
             // panel2
             // 
@@ -188,16 +199,6 @@
             // 
             this.tblSupplierBindingSource.DataMember = "tblSupplier";
             // 
-            // invTablesDatabaseDataSet
-            // 
-            this.invTablesDatabaseDataSet.DataSetName = "InvTablesDatabaseDataSet";
-            this.invTablesDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblSupplierBindingSource2
-            // 
-            this.tblSupplierBindingSource2.DataMember = "tblSupplier";
-            this.tblSupplierBindingSource2.DataSource = this.invTablesDatabaseDataSet;
-            // 
             // tblSupplierTableAdapter
             // 
             this.tblSupplierTableAdapter.ClearBeforeFill = true;
@@ -209,6 +210,8 @@
             this.ClientSize = new System.Drawing.Size(425, 627);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "InventoryIn_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InventoryIn_Form";
@@ -217,13 +220,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblSupplierBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invTablesDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblSupplierBindingSource1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblSupplierBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invTablesDatabaseDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblSupplierBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }

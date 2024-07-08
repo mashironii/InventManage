@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.delbtn = new System.Windows.Forms.Button();
+            this.updatebtn = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.SuppliercomboBox3 = new System.Windows.Forms.ComboBox();
             this.CategorycomboBox2 = new System.Windows.Forms.ComboBox();
@@ -50,13 +53,6 @@
             this.backbtn = new System.Windows.Forms.Button();
             this.addbtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.updatebtn = new System.Windows.Forms.Button();
-            this.delbtn = new System.Windows.Forms.Button();
-            this.invTablesDatabaseDataSet = new InventManage.InvTablesDatabaseDataSet();
-            this.tblIngredientsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.tblIngredientsTableAdapter = new InventManage.InvTablesDatabaseDataSetTableAdapters.tblIngredientsTableAdapter();
-            this.button2 = new System.Windows.Forms.Button();
             this.ingredientIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ingredientNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,14 +61,18 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblIngredientsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.invTablesDatabaseDataSet = new InventManage.InvTablesDatabaseDataSet();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tblIngredientsTableAdapter = new InventManage.InvTablesDatabaseDataSetTableAdapters.tblIngredientsTableAdapter();
             this.tblIngredientsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.tblIngredientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblIngredientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.invTablesDatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invTablesDatabaseDataSet)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource)).BeginInit();
@@ -107,11 +107,44 @@
             this.panel1.Size = new System.Drawing.Size(888, 84);
             this.panel1.TabIndex = 1;
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(658, 302);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(166, 29);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "Reload Table";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // delbtn
+            // 
+            this.delbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delbtn.Location = new System.Drawing.Point(536, 302);
+            this.delbtn.Name = "delbtn";
+            this.delbtn.Size = new System.Drawing.Size(116, 29);
+            this.delbtn.TabIndex = 23;
+            this.delbtn.Text = "Delete";
+            this.delbtn.UseVisualStyleBackColor = true;
+            this.delbtn.Click += new System.EventHandler(this.delbtn_Click);
+            // 
+            // updatebtn
+            // 
+            this.updatebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updatebtn.Location = new System.Drawing.Point(414, 302);
+            this.updatebtn.Name = "updatebtn";
+            this.updatebtn.Size = new System.Drawing.Size(116, 29);
+            this.updatebtn.TabIndex = 22;
+            this.updatebtn.Text = "Update";
+            this.updatebtn.UseVisualStyleBackColor = true;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(193, 301);
+            this.label8.Location = new System.Drawing.Point(195, 215);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 25);
             this.label8.TabIndex = 21;
@@ -121,7 +154,7 @@
             // 
             this.SuppliercomboBox3.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SuppliercomboBox3.FormattingEnabled = true;
-            this.SuppliercomboBox3.Location = new System.Drawing.Point(586, 298);
+            this.SuppliercomboBox3.Location = new System.Drawing.Point(588, 212);
             this.SuppliercomboBox3.Name = "SuppliercomboBox3";
             this.SuppliercomboBox3.Size = new System.Drawing.Size(238, 33);
             this.SuppliercomboBox3.TabIndex = 20;
@@ -140,7 +173,7 @@
             "Canned Goods",
             "Spices and Seasonings",
             "Sauces and Condiments"});
-            this.CategorycomboBox2.Location = new System.Drawing.Point(586, 216);
+            this.CategorycomboBox2.Location = new System.Drawing.Point(588, 130);
             this.CategorycomboBox2.Name = "CategorycomboBox2";
             this.CategorycomboBox2.Size = new System.Drawing.Size(238, 33);
             this.CategorycomboBox2.TabIndex = 19;
@@ -153,7 +186,7 @@
             this.UnitcomboBox1.Items.AddRange(new object[] {
             "Kilogram",
             "Liter"});
-            this.UnitcomboBox1.Location = new System.Drawing.Point(304, 215);
+            this.UnitcomboBox1.Location = new System.Drawing.Point(306, 129);
             this.UnitcomboBox1.Name = "UnitcomboBox1";
             this.UnitcomboBox1.Size = new System.Drawing.Size(131, 33);
             this.UnitcomboBox1.TabIndex = 18;
@@ -163,7 +196,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(581, 260);
+            this.label7.Location = new System.Drawing.Point(583, 174);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 25);
             this.label7.TabIndex = 17;
@@ -173,7 +206,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(581, 178);
+            this.label6.Location = new System.Drawing.Point(583, 92);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 25);
             this.label6.TabIndex = 15;
@@ -182,7 +215,7 @@
             // UnitCosttextBox5
             // 
             this.UnitCosttextBox5.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UnitCosttextBox5.Location = new System.Drawing.Point(304, 299);
+            this.UnitCosttextBox5.Location = new System.Drawing.Point(306, 213);
             this.UnitCosttextBox5.Name = "UnitCosttextBox5";
             this.UnitCosttextBox5.Size = new System.Drawing.Size(244, 29);
             this.UnitCosttextBox5.TabIndex = 14;
@@ -191,7 +224,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(299, 261);
+            this.label5.Location = new System.Drawing.Point(301, 175);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 25);
             this.label5.TabIndex = 13;
@@ -201,7 +234,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(299, 178);
+            this.label4.Location = new System.Drawing.Point(301, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 25);
             this.label4.TabIndex = 11;
@@ -210,7 +243,7 @@
             // MROPtextBox3
             // 
             this.MROPtextBox3.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MROPtextBox3.Location = new System.Drawing.Point(33, 299);
+            this.MROPtextBox3.Location = new System.Drawing.Point(35, 213);
             this.MROPtextBox3.Name = "MROPtextBox3";
             this.MROPtextBox3.Size = new System.Drawing.Size(142, 29);
             this.MROPtextBox3.TabIndex = 10;
@@ -219,7 +252,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 261);
+            this.label3.Location = new System.Drawing.Point(30, 175);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 25);
             this.label3.TabIndex = 9;
@@ -228,7 +261,7 @@
             // IngNametextBox2
             // 
             this.IngNametextBox2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IngNametextBox2.Location = new System.Drawing.Point(33, 216);
+            this.IngNametextBox2.Location = new System.Drawing.Point(35, 130);
             this.IngNametextBox2.Name = "IngNametextBox2";
             this.IngNametextBox2.Size = new System.Drawing.Size(244, 29);
             this.IngNametextBox2.TabIndex = 8;
@@ -237,7 +270,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 178);
+            this.label2.Location = new System.Drawing.Point(30, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 25);
             this.label2.TabIndex = 7;
@@ -245,19 +278,20 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(292, 134);
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(292, 302);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 29);
             this.button1.TabIndex = 6;
             this.button1.Text = "Find";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // IngredIDtextBox1
             // 
             this.IngredIDtextBox1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IngredIDtextBox1.Location = new System.Drawing.Point(33, 134);
+            this.IngredIDtextBox1.Location = new System.Drawing.Point(33, 302);
             this.IngredIDtextBox1.Name = "IngredIDtextBox1";
             this.IngredIDtextBox1.Size = new System.Drawing.Size(244, 29);
             this.IngredIDtextBox1.TabIndex = 5;
@@ -266,29 +300,29 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 96);
+            this.label1.Location = new System.Drawing.Point(28, 264);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 25);
+            this.label1.Size = new System.Drawing.Size(208, 25);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Ingredient Name:";
+            this.label1.Text = "Search Ingredient Name:";
             // 
             // expandbtn
             // 
-            this.expandbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.expandbtn.Location = new System.Drawing.Point(461, 16);
+            this.expandbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expandbtn.Location = new System.Drawing.Point(510, 23);
             this.expandbtn.Name = "expandbtn";
-            this.expandbtn.Size = new System.Drawing.Size(48, 54);
+            this.expandbtn.Size = new System.Drawing.Size(109, 43);
             this.expandbtn.TabIndex = 3;
-            this.expandbtn.Text = "V";
+            this.expandbtn.Text = "Expand";
             this.expandbtn.UseVisualStyleBackColor = true;
             this.expandbtn.Click += new System.EventHandler(this.expandbtn_Click);
             // 
             // backbtn
             // 
-            this.backbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backbtn.Location = new System.Drawing.Point(292, 16);
+            this.backbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backbtn.Location = new System.Drawing.Point(414, 23);
             this.backbtn.Name = "backbtn";
-            this.backbtn.Size = new System.Drawing.Size(154, 54);
+            this.backbtn.Size = new System.Drawing.Size(84, 43);
             this.backbtn.TabIndex = 2;
             this.backbtn.Text = "Back";
             this.backbtn.UseVisualStyleBackColor = true;
@@ -296,10 +330,10 @@
             // 
             // addbtn
             // 
-            this.addbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addbtn.Location = new System.Drawing.Point(33, 16);
+            this.addbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addbtn.Location = new System.Drawing.Point(215, 23);
             this.addbtn.Name = "addbtn";
-            this.addbtn.Size = new System.Drawing.Size(244, 54);
+            this.addbtn.Size = new System.Drawing.Size(188, 43);
             this.addbtn.TabIndex = 1;
             this.addbtn.Text = "Add Ingredients";
             this.addbtn.UseVisualStyleBackColor = true;
@@ -324,62 +358,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(888, 340);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Controls.Add(this.dataGridView1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 1);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(901, 717);
-            this.flowLayoutPanel1.TabIndex = 3;
-            // 
-            // updatebtn
-            // 
-            this.updatebtn.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updatebtn.Location = new System.Drawing.Point(414, 134);
-            this.updatebtn.Name = "updatebtn";
-            this.updatebtn.Size = new System.Drawing.Size(116, 29);
-            this.updatebtn.TabIndex = 22;
-            this.updatebtn.Text = "Update";
-            this.updatebtn.UseVisualStyleBackColor = true;
-            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
-            // 
-            // delbtn
-            // 
-            this.delbtn.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delbtn.Location = new System.Drawing.Point(536, 134);
-            this.delbtn.Name = "delbtn";
-            this.delbtn.Size = new System.Drawing.Size(116, 29);
-            this.delbtn.TabIndex = 23;
-            this.delbtn.Text = "Delete";
-            this.delbtn.UseVisualStyleBackColor = true;
-            this.delbtn.Click += new System.EventHandler(this.delbtn_Click);
-            // 
-            // invTablesDatabaseDataSet
-            // 
-            this.invTablesDatabaseDataSet.DataSetName = "InvTablesDatabaseDataSet";
-            this.invTablesDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblIngredientsBindingSource3
-            // 
-            this.tblIngredientsBindingSource3.DataMember = "tblIngredients";
-            this.tblIngredientsBindingSource3.DataSource = this.invTablesDatabaseDataSet;
-            // 
-            // tblIngredientsTableAdapter
-            // 
-            this.tblIngredientsTableAdapter.ClearBeforeFill = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(658, 134);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 29);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Reload Table";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ingredientIdDataGridViewTextBoxColumn
             // 
@@ -437,6 +415,29 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Supplier";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // tblIngredientsBindingSource3
+            // 
+            this.tblIngredientsBindingSource3.DataMember = "tblIngredients";
+            this.tblIngredientsBindingSource3.DataSource = this.invTablesDatabaseDataSet;
+            // 
+            // invTablesDatabaseDataSet
+            // 
+            this.invTablesDatabaseDataSet.DataSetName = "InvTablesDatabaseDataSet";
+            this.invTablesDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.Controls.Add(this.dataGridView1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 1);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(901, 717);
+            this.flowLayoutPanel1.TabIndex = 3;
+            // 
+            // tblIngredientsTableAdapter
+            // 
+            this.tblIngredientsTableAdapter.ClearBeforeFill = true;
+            // 
             // tblIngredientsBindingSource2
             // 
             this.tblIngredientsBindingSource2.DataMember = "tblIngredients";
@@ -455,6 +456,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 437);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddIngredients_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddIngredients_Form";
@@ -462,9 +465,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.invTablesDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invTablesDatabaseDataSet)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblIngredientsBindingSource)).EndInit();

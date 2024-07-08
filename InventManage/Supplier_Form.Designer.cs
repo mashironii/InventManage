@@ -16,7 +16,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.expandbtn = new System.Windows.Forms.Button();
             this.backbtn = new System.Windows.Forms.Button();
             this.addSuppbtn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -39,23 +38,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.invTablesDatabaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // expandbtn
-            // 
-            this.expandbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F);
-            this.expandbtn.Location = new System.Drawing.Point(440, 16);
-            this.expandbtn.Name = "expandbtn";
-            this.expandbtn.Size = new System.Drawing.Size(48, 54);
-            this.expandbtn.TabIndex = 6;
-            this.expandbtn.Text = "V";
-            this.expandbtn.UseVisualStyleBackColor = true;
-            this.expandbtn.Click += new System.EventHandler(this.expandbtn_Click);
-            // 
             // backbtn
             // 
-            this.backbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F);
-            this.backbtn.Location = new System.Drawing.Point(271, 16);
+            this.backbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backbtn.Location = new System.Drawing.Point(297, 14);
             this.backbtn.Name = "backbtn";
-            this.backbtn.Size = new System.Drawing.Size(154, 54);
+            this.backbtn.Size = new System.Drawing.Size(104, 39);
             this.backbtn.TabIndex = 5;
             this.backbtn.Text = "Back";
             this.backbtn.UseVisualStyleBackColor = true;
@@ -63,10 +51,10 @@
             // 
             // addSuppbtn
             // 
-            this.addSuppbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F);
-            this.addSuppbtn.Location = new System.Drawing.Point(12, 16);
+            this.addSuppbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addSuppbtn.Location = new System.Drawing.Point(77, 14);
             this.addSuppbtn.Name = "addSuppbtn";
-            this.addSuppbtn.Size = new System.Drawing.Size(244, 54);
+            this.addSuppbtn.Size = new System.Drawing.Size(214, 39);
             this.addSuppbtn.TabIndex = 4;
             this.addSuppbtn.Text = "Add Supplier";
             this.addSuppbtn.UseVisualStyleBackColor = true;
@@ -78,7 +66,7 @@
             this.flowLayoutPanel1.Controls.Add(this.dataGridView1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(507, 456);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(501, 456);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
             // panel1
@@ -91,16 +79,15 @@
             this.panel1.Controls.Add(this.supplbl);
             this.panel1.Controls.Add(this.addSuppbtn);
             this.panel1.Controls.Add(this.backbtn);
-            this.panel1.Controls.Add(this.expandbtn);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(504, 70);
+            this.panel1.Size = new System.Drawing.Size(495, 70);
             this.panel1.TabIndex = 8;
             // 
             // newSuppNametxtbx
             // 
             this.newSuppNametxtbx.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
-            this.newSuppNametxtbx.Location = new System.Drawing.Point(181, 188);
+            this.newSuppNametxtbx.Location = new System.Drawing.Point(179, 157);
             this.newSuppNametxtbx.Name = "newSuppNametxtbx";
             this.newSuppNametxtbx.Size = new System.Drawing.Size(244, 29);
             this.newSuppNametxtbx.TabIndex = 15;
@@ -109,7 +96,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 15.75F);
-            this.label1.Location = new System.Drawing.Point(50, 191);
+            this.label1.Location = new System.Drawing.Point(48, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 25);
             this.label1.TabIndex = 14;
@@ -117,10 +104,10 @@
             // 
             // updatebtn
             // 
-            this.updatebtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F);
-            this.updatebtn.Location = new System.Drawing.Point(102, 76);
+            this.updatebtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updatebtn.Location = new System.Drawing.Point(77, 69);
             this.updatebtn.Name = "updatebtn";
-            this.updatebtn.Size = new System.Drawing.Size(154, 54);
+            this.updatebtn.Size = new System.Drawing.Size(104, 35);
             this.updatebtn.TabIndex = 13;
             this.updatebtn.Text = "Update";
             this.updatebtn.UseVisualStyleBackColor = true;
@@ -128,10 +115,10 @@
             // 
             // delbtn
             // 
-            this.delbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F);
-            this.delbtn.Location = new System.Drawing.Point(271, 76);
+            this.delbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delbtn.Location = new System.Drawing.Point(187, 69);
             this.delbtn.Name = "delbtn";
-            this.delbtn.Size = new System.Drawing.Size(154, 54);
+            this.delbtn.Size = new System.Drawing.Size(104, 35);
             this.delbtn.TabIndex = 12;
             this.delbtn.Text = "Delete";
             this.delbtn.UseVisualStyleBackColor = true;
@@ -140,7 +127,7 @@
             // supptxtbx
             // 
             this.supptxtbx.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
-            this.supptxtbx.Location = new System.Drawing.Point(181, 153);
+            this.supptxtbx.Location = new System.Drawing.Point(179, 122);
             this.supptxtbx.Name = "supptxtbx";
             this.supptxtbx.Size = new System.Drawing.Size(244, 29);
             this.supptxtbx.TabIndex = 10;
@@ -150,7 +137,7 @@
             // 
             this.supplbl.AutoSize = true;
             this.supplbl.Font = new System.Drawing.Font("Arial Narrow", 15.75F);
-            this.supplbl.Location = new System.Drawing.Point(50, 156);
+            this.supplbl.Location = new System.Drawing.Point(48, 125);
             this.supplbl.Name = "supplbl";
             this.supplbl.Size = new System.Drawing.Size(133, 25);
             this.supplbl.TabIndex = 9;
@@ -199,8 +186,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 464);
+            this.ClientSize = new System.Drawing.Size(503, 464);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Supplier_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Supplier_Form";
@@ -214,8 +203,6 @@
             this.ResumeLayout(false);
 
         }
-
-        private System.Windows.Forms.Button expandbtn;
         private System.Windows.Forms.Button backbtn;
         private System.Windows.Forms.Button addSuppbtn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

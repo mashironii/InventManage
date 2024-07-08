@@ -33,7 +33,9 @@ namespace InventManage
             if (Emptxtbx.Text == "" && PassTxtBx.Text == "")
             {
                 MessageBox.Show("Please enter your Username and Password to log in.");
+                return; // Exit method if fields are empty
             }
+
             try
             {
                 if (cn.State == System.Data.ConnectionState.Closed)
@@ -41,7 +43,7 @@ namespace InventManage
                     cn.Open();
                 }
 
-                string qry = "SELECT Full_Name FROM tblUser WHERE Username = @Username AND Password = @Password";
+                string qry = "SELECT Full_Name, Position FROM tblUser WHERE Username = @Username AND Password = @Password";
                 cmd = new SqlCommand(qry, cn);
                 cmd.Parameters.AddWithValue("@Username", Emptxtbx.Text);
                 cmd.Parameters.AddWithValue("@Password", PassTxtBx.Text);
@@ -51,8 +53,10 @@ namespace InventManage
                 if (dr.Read())
                 {
                     string fullName = dr["Full_Name"].ToString();
+                    string position = dr["Position"].ToString();
+
                     this.Hide();
-                    Main_Form main_Form = new Main_Form(fullName);
+                    Main_Form main_Form = new Main_Form(fullName, position); // Pass position to Main_Form
                     main_Form.ShowDialog();
                     this.Close();
                 }
@@ -75,6 +79,7 @@ namespace InventManage
                 }
             }
         }
+
 
         private void Login_Form_Load(object sender, EventArgs e)
         {

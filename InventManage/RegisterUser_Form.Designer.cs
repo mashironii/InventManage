@@ -125,10 +125,10 @@
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(119, 240);
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(157, 239);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 44);
+            this.button1.Size = new System.Drawing.Size(128, 44);
             this.button1.TabIndex = 19;
             this.button1.Text = "Register";
             this.button1.UseVisualStyleBackColor = true;
@@ -137,10 +137,10 @@
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(304, 240);
+            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(300, 240);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(162, 43);
+            this.button2.Size = new System.Drawing.Size(95, 43);
             this.button2.TabIndex = 20;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
@@ -161,6 +161,8 @@
             this.Controls.Add(this.positionComboBox);
             this.Controls.Add(last_NameLabel);
             this.Controls.Add(positionLabel);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "RegisterUser_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterUser_Form";

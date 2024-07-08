@@ -47,6 +47,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.findbtn = new System.Windows.Forms.Button();
             this.UnitCombo = new System.Windows.Forms.ComboBox();
+            this.Backbtn = new System.Windows.Forms.Button();
             this.DishNameCombo = new System.Windows.Forms.ComboBox();
             this.tblDishesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.QuantityReqTxtBox = new System.Windows.Forms.TextBox();
@@ -55,7 +56,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Dish_NameTextBox = new System.Windows.Forms.TextBox();
-            this.Backbtn = new System.Windows.Forms.Button();
             this.AddDishbtn = new System.Windows.Forms.Button();
             this.tblDishesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblIngredientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -87,7 +87,7 @@
             // 
             DishLbl.AutoSize = true;
             DishLbl.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            DishLbl.Location = new System.Drawing.Point(29, 80);
+            DishLbl.Location = new System.Drawing.Point(29, 78);
             DishLbl.Name = "DishLbl";
             DishLbl.Size = new System.Drawing.Size(128, 31);
             DishLbl.TabIndex = 4;
@@ -97,7 +97,7 @@
             // 
             dishIngrLbl.AutoSize = true;
             dishIngrLbl.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dishIngrLbl.Location = new System.Drawing.Point(29, 486);
+            dishIngrLbl.Location = new System.Drawing.Point(29, 470);
             dishIngrLbl.Name = "dishIngrLbl";
             dishIngrLbl.Size = new System.Drawing.Size(116, 31);
             dishIngrLbl.TabIndex = 22;
@@ -107,7 +107,7 @@
             // 
             QuantityReqLbl.AutoSize = true;
             QuantityReqLbl.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            QuantityReqLbl.Location = new System.Drawing.Point(29, 568);
+            QuantityReqLbl.Location = new System.Drawing.Point(29, 552);
             QuantityReqLbl.Name = "QuantityReqLbl";
             QuantityReqLbl.Size = new System.Drawing.Size(195, 31);
             QuantityReqLbl.TabIndex = 24;
@@ -117,7 +117,7 @@
             // 
             DishIngLbl.AutoSize = true;
             DishIngLbl.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            DishIngLbl.Location = new System.Drawing.Point(29, 401);
+            DishIngLbl.Location = new System.Drawing.Point(29, 385);
             DishIngLbl.Name = "DishIngLbl";
             DishIngLbl.Size = new System.Drawing.Size(128, 31);
             DishIngLbl.TabIndex = 28;
@@ -127,7 +127,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(3, 10);
+            label1.Location = new System.Drawing.Point(5, 10);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(178, 31);
             label1.TabIndex = 31;
@@ -142,9 +142,9 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.dataGridView1.DataSource = this.tblDishesBindingSource3;
-            this.dataGridView1.Location = new System.Drawing.Point(458, 22);
+            this.dataGridView1.Location = new System.Drawing.Point(544, 22);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(369, 281);
+            this.dataGridView1.Size = new System.Drawing.Size(454, 281);
             this.dataGridView1.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
@@ -180,6 +180,7 @@
             this.panel1.Controls.Add(this.findbtn);
             this.panel1.Controls.Add(this.UnitCombo);
             this.panel1.Controls.Add(DishIngLbl);
+            this.panel1.Controls.Add(this.Backbtn);
             this.panel1.Controls.Add(this.DishNameCombo);
             this.panel1.Controls.Add(this.QuantityReqTxtBox);
             this.panel1.Controls.Add(QuantityReqLbl);
@@ -190,7 +191,6 @@
             this.panel1.Controls.Add(this.Dish_NameTextBox);
             this.panel1.Controls.Add(DishLbl);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.Backbtn);
             this.panel1.Controls.Add(this.AddDishbtn);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -203,17 +203,17 @@
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.newdishname);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Location = new System.Drawing.Point(25, 158);
+            this.panel2.Location = new System.Drawing.Point(25, 199);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(427, 13);
+            this.panel2.Size = new System.Drawing.Size(513, 10);
             this.panel2.TabIndex = 35;
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(325, 46);
+            this.button3.Location = new System.Drawing.Point(305, 9);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 38);
+            this.button3.Size = new System.Drawing.Size(188, 38);
             this.button3.TabIndex = 34;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = true;
@@ -222,17 +222,17 @@
             // newdishname
             // 
             this.newdishname.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newdishname.Location = new System.Drawing.Point(9, 44);
+            this.newdishname.Location = new System.Drawing.Point(10, 53);
             this.newdishname.Name = "newdishname";
             this.newdishname.Size = new System.Drawing.Size(289, 38);
             this.newdishname.TabIndex = 32;
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(325, 90);
+            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(305, 53);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 38);
+            this.button2.Size = new System.Drawing.Size(188, 38);
             this.button2.TabIndex = 33;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = true;
@@ -240,10 +240,10 @@
             // 
             // findbtn
             // 
-            this.findbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.findbtn.Location = new System.Drawing.Point(350, 114);
+            this.findbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.findbtn.Location = new System.Drawing.Point(330, 111);
             this.findbtn.Name = "findbtn";
-            this.findbtn.Size = new System.Drawing.Size(88, 38);
+            this.findbtn.Size = new System.Drawing.Size(187, 38);
             this.findbtn.TabIndex = 30;
             this.findbtn.Text = "Find";
             this.findbtn.UseVisualStyleBackColor = true;
@@ -259,10 +259,22 @@
             "grams",
             "liters",
             "milliliters"});
-            this.UnitCombo.Location = new System.Drawing.Point(214, 619);
+            this.UnitCombo.Location = new System.Drawing.Point(214, 603);
             this.UnitCombo.Name = "UnitCombo";
             this.UnitCombo.Size = new System.Drawing.Size(142, 33);
             this.UnitCombo.TabIndex = 29;
+            this.UnitCombo.Text = "Unit";
+            // 
+            // Backbtn
+            // 
+            this.Backbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Backbtn.Location = new System.Drawing.Point(331, 155);
+            this.Backbtn.Name = "Backbtn";
+            this.Backbtn.Size = new System.Drawing.Size(186, 38);
+            this.Backbtn.TabIndex = 3;
+            this.Backbtn.Text = "Back";
+            this.Backbtn.UseVisualStyleBackColor = true;
+            this.Backbtn.Click += new System.EventHandler(this.Backbtn_Click);
             // 
             // DishNameCombo
             // 
@@ -270,7 +282,7 @@
             this.DishNameCombo.DisplayMember = "Dish_Name";
             this.DishNameCombo.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DishNameCombo.FormattingEnabled = true;
-            this.DishNameCombo.Location = new System.Drawing.Point(35, 435);
+            this.DishNameCombo.Location = new System.Drawing.Point(35, 419);
             this.DishNameCombo.Name = "DishNameCombo";
             this.DishNameCombo.Size = new System.Drawing.Size(238, 33);
             this.DishNameCombo.TabIndex = 27;
@@ -284,7 +296,7 @@
             // QuantityReqTxtBox
             // 
             this.QuantityReqTxtBox.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuantityReqTxtBox.Location = new System.Drawing.Point(35, 616);
+            this.QuantityReqTxtBox.Location = new System.Drawing.Point(35, 600);
             this.QuantityReqTxtBox.Name = "QuantityReqTxtBox";
             this.QuantityReqTxtBox.Size = new System.Drawing.Size(170, 38);
             this.QuantityReqTxtBox.TabIndex = 25;
@@ -295,7 +307,7 @@
             this.DishIngredComboBx.DisplayMember = "Ingredient_Name";
             this.DishIngredComboBx.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DishIngredComboBx.FormattingEnabled = true;
-            this.DishIngredComboBx.Location = new System.Drawing.Point(35, 520);
+            this.DishIngredComboBx.Location = new System.Drawing.Point(35, 504);
             this.DishIngredComboBx.Name = "DishIngredComboBx";
             this.DishIngredComboBx.Size = new System.Drawing.Size(238, 33);
             this.DishIngredComboBx.TabIndex = 21;
@@ -308,10 +320,10 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(35, 324);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(370, 45);
+            this.button1.Size = new System.Drawing.Size(238, 45);
             this.button1.TabIndex = 7;
             this.button1.Text = "Add Dish Ingredient";
             this.button1.UseVisualStyleBackColor = true;
@@ -328,28 +340,17 @@
             // Dish_NameTextBox
             // 
             this.Dish_NameTextBox.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dish_NameTextBox.Location = new System.Drawing.Point(35, 114);
+            this.Dish_NameTextBox.Location = new System.Drawing.Point(35, 112);
             this.Dish_NameTextBox.Name = "Dish_NameTextBox";
             this.Dish_NameTextBox.Size = new System.Drawing.Size(289, 38);
             this.Dish_NameTextBox.TabIndex = 5;
             // 
-            // Backbtn
-            // 
-            this.Backbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Backbtn.Location = new System.Drawing.Point(235, 22);
-            this.Backbtn.Name = "Backbtn";
-            this.Backbtn.Size = new System.Drawing.Size(170, 45);
-            this.Backbtn.TabIndex = 3;
-            this.Backbtn.Text = "Back";
-            this.Backbtn.UseVisualStyleBackColor = true;
-            this.Backbtn.Click += new System.EventHandler(this.Backbtn_Click);
-            // 
             // AddDishbtn
             // 
-            this.AddDishbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddDishbtn.Location = new System.Drawing.Point(35, 22);
+            this.AddDishbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddDishbtn.Location = new System.Drawing.Point(330, 60);
             this.AddDishbtn.Name = "AddDishbtn";
-            this.AddDishbtn.Size = new System.Drawing.Size(170, 45);
+            this.AddDishbtn.Size = new System.Drawing.Size(188, 45);
             this.AddDishbtn.TabIndex = 2;
             this.AddDishbtn.Text = "Add Dish";
             this.AddDishbtn.UseVisualStyleBackColor = true;
@@ -385,6 +386,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 703);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddDish_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddDish_Form";

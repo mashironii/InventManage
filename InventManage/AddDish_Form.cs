@@ -131,9 +131,9 @@ namespace InventManage
         {
             //427, 145
 
-            if (panel2.Height == 13)
+            if (panel2.Height == 10)
             {
-                panel2.Height = 145;
+                panel2.Height = 104;
             }
 
             if (string.IsNullOrEmpty(Dish_NameTextBox.Text))
@@ -217,6 +217,11 @@ namespace InventManage
             {
                 MessageBox.Show("Dish not found.");
             }
+        }
+
+        private void clearBTn_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
